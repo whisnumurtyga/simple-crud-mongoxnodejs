@@ -24,5 +24,5 @@ To get started with the `mongo-contact-app`, please follow the instructions belo
 `nodemon app`
 
 
-The application will be running at `http://localhost:3000`.
-rebuild from Name: [Abdur Rafi](https://github.com/rafisr23/mongo-contact-app)
+The application will be running at `http://localhost:3000`.  
+<br>rebuild from : [Abdur Rafi](https://github.com/rafisr23/mongo-contact-app)
