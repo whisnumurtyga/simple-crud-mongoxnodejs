@@ -7,10 +7,10 @@ Welcome to the `mongo-contact-app` repository! This repository contains a simple
 To get started with the `mongo-contact-app`, please follow the instructions below:
 
 1. Clone the repository:
-`git clone https://github.com/rafisr23/mongo-contact-app.git`
+`git clone https://github.com/whisnumurtyga/simple-crud-mongoxnodejs`
 
 2. Navigate to the project directory:
-`cd mongo-contact-app`
+`cd telco-app`
 
 3. Install the dependencies:
 `npm install`
