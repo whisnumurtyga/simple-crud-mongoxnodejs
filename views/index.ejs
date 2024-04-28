@@ -1,0 +1,26 @@
+<% if (vouchers.length < 1) { %>
+<p>Data Voucher masih kosong</p>
+<% } else { %> 
+  <div class="col-lg-6 mt-5">
+    <form method="POST" action="/vouchers/login?_method=PUT">
+      <div class="mb-3">
+        <h1>Login Duluuu</h1>
+        <% if (msg.length != 0) { %>
+          <div class="alert <%= msg.includes('Invalid') ? 'alert-success' : 'alert-danger' %>" role="alert"><%= msg.includes('Success') ? '' : msg %></div>
+        <% } %>
+        <div class="row g-3">
+          <div class="col">
+            <!-- <label for="username" class="form-label">Username</label> -->
+            <input type="text" class="form-control" placeholder="Username" name="username">
+          </div>
+          <div class="col">
+            <!-- <label for="voucherCode" class="form-label">Voucher Code</label> -->
+            <input type="text" class="form-control" placeholder="Voucher Code" name="voucherCode">
+          </div>
+        </div>
+      </div>
+      <button type="submit" class="btn btn-success">Login</button>
+    </form>
+  </div>
+<% } %>
+

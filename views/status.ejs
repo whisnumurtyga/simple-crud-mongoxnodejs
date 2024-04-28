@@ -1,0 +1,21 @@
+<div class="container">
+  <div class="row">
+    <div class="col text-center">
+      <% if (voucher) { %>
+        <img src="https://source.unsplash.com/200x200/?person" alt="profile" width="200" class="img-thumbnail rounded-circle">
+        <h1 class="display-4">Halo <%= voucher.username %></h1>
+        <div class="col text-center">
+          <div class="card mx-auto" style="width: 18rem">
+            <div class="card-body">
+              <p class="card-text btn <%= voucher.voucherCode ? 'btn-success' : 'btn-danger' %>"><%= voucher.voucherCode ? voucher.voucherCode : 'Unused' %></p>
+              <h6 class="card-subtitle mb-2 text-body-secondary">Duration Left: <br> <%= getRemainingDuration(voucher.expired) %></h6>
+              <p class="card-text">Expired Date: <br> <%= moment(voucher.expired).format('ddd MMM DD YYYY HH:mm:ss') %></p>
+              <p class="card-text">Last Login: <br> <%= moment(voucher.lastLogin).format('ddd MMM DD YYYY HH:mm:ss') %></p>
+            </div>
+        <% }else {%>
+          <h1>Kamu belum Login</h1>
+        <% }%>
+      </div>
+    </div>
+  </div>
+</div>
