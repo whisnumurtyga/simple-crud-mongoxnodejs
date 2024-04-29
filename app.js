@@ -128,12 +128,13 @@ app.post(
     } else {
       // console.log(req.body)
       // return 
-      const durationInDays = moment.duration(req.body.duration, 'days'); // Buat durasi dalam satuan hari
+      const durationInDays = moment.duration(req.body.duration, 'hours'); // Buat durasi dalam satuan hari
       data = {
         voucherCode: generateVoucher(),
         // expired: new Date(Date.now() + (req.body.duration * 24 * 60 * 60 * 1000))
-        expired: moment().add(durationInDays)
+        expired: moment().add(durationInDays.asHours(), 'hours')
       }
+      
       const result = await Voucher.insertMany(data);
       if (result) {
         req.flash('msg', 'Voucher successfuly added!');
@@ -181,7 +182,7 @@ app.put(
         { _id: req.body._id },
         {
           $set: {
-            expired: new Date(oldVoucher.expired.getTime() + (req.body.duration * 24 * 60 * 60 * 1000)),
+            expired: new Date(oldVoucher.expired.getTime() + (req.body.duration * 60 * 60 * 1000)),
           },
         }
       );
