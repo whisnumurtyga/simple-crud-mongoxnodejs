@@ -1,4 +1,4 @@
-# Repository: mongo-contact-app
+# Repository: telco-app
 
 Welcome to the `mongo-contact-app` repository! This repository contains a simple contact management application built using MongoDB, Node.js, and Express.js. The application allows you to store and manage contacts in a MongoDB database.
 
